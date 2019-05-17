@@ -1,4 +1,4 @@
-ansible_ssh_user: "splunk"
+ansible_ssh_user: "ansible"
 ansible_pre_tasks:
 ansible_post_tasks:
 delay_num: 3
@@ -32,7 +32,7 @@ splunk:
     pid: !!python/object/apply:string.join [[*home, "/var/run/splunk/splunkd.pid"], '']
     admin_user: "admin"
     password:
-    secret: 
+    secret:
     svc_port: 8089
     s2s_port: 9997
     s2s_enable: True
