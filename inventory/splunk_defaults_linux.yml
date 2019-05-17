@@ -31,19 +31,19 @@ splunk:
     exec: !!python/object/apply:string.join [[*home, "/bin/splunk"], '']
     pid: !!python/object/apply:string.join [[*home, "/var/run/splunk/splunkd.pid"], '']
     admin_user: "admin"
-    password:
-    secret:
+    password: "1U3q*c4@"
+    secret: "I6iX%15a"
     svc_port: 8089
     s2s_port: 9997
     s2s_enable: True
     http_port: 8000
-    http_enableSSL: 0
+    http_enableSSL: 1
     http_enableSSL_cert:
     http_enableSSL_privKey:
     http_enableSSL_privKey_password:
     hec_port: 8088
-    hec_disabled: 0
-    hec_enableSSL: 1
+    hec_disabled: 1
+    hec_enableSSL: 0
     hec_token:
     shc:
         enable: False
@@ -52,9 +52,9 @@ splunk:
         replication_factor: 3
         replication_port: 9887
     idxc:
-        enable: False
-        secret:
-        label: "idxc_label"
+        enable: True
+        secret: "I6iX%15a"
+        label: "idxc_domain"
         search_factor: 3
         replication_factor: 3
         replication_port: 9887
