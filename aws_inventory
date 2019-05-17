@@ -8,6 +8,9 @@
 
 [tag_Application_splunk_cm]
 
+[children:dmc]
+tag_Application_splunk_dmc
+
 [children:splunk_search_head]
 tag_Application_splunk_search
 

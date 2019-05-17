@@ -1,6 +1,7 @@
 ---
 - hosts: splunk_search_head
   gather_facts: true
+  user: ansible
   environment:
     - LANG: en_US.utf8
   tasks:
@@ -132,4 +133,3 @@
       register: splunk_job_result
       until: splunk_job_result.finished
       retries: 1000
-
