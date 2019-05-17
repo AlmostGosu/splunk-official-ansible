@@ -114,6 +114,8 @@
         dest: /tmp/defaults/default.yml
         owner: ansible
         group: ansible
+      become: True
+      become_user: root
 
     - name: Start Splunk-Ansible
       command: ansible-playbook -i inventory/environ.py site.yml
