@@ -9,8 +9,8 @@
       file:
         state: directory
         path: /tmp/defaults
-        owner: ansible
-        group: ansible
+        owner: splunk
+        group: splunk
         # when specifying mode using octal numbers, add a leading 0
         mode: 0755
 
@@ -18,8 +18,8 @@
       copy:
         src: default.yml
         dest: /tmp/defaults/default.yml
-        owner: ansible
-        group: ansible
+        owner: splunk
+        group: splunk
 
     - debug:
         var: groups["splunk_cluster_master"]
